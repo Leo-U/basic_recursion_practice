@@ -1,4 +1,4 @@
-#first, write a non-recursive method that sums the range of 1 thru n from given input `n`.
+#first, write a non-recursive method that sums the range of 1 through n from given input `n`.
 
 def sum_range(n)
   total = n
