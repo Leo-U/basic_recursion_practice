@@ -13,3 +13,9 @@ end
 
 # now, write a recursive version.
 
+def sum_range_rec(n, total = 0)
+  total += n
+  return total if n == 1
+  n -= 1
+  sum_range_rec(n, total)
+end
