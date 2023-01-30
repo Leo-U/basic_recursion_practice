@@ -1,3 +1,5 @@
+#the following imitates https://www.youtube.com/watch?v=6oDQaB2one8 (What Is Recusrion - In Depth by Web Dev Simplified) with code in Ruby rather than JS.
+
 #first, write a non-recursive method that sums the range of 1 through n from given input `n`.
 
 def sum_range(n)
