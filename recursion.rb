@@ -6,7 +6,6 @@ def sum_range(n)
   while i > 0 do
     i -= 1
     total += i
-    puts total
   end
   total
 end
@@ -14,8 +13,29 @@ end
 # now, write a recursive version.
 
 def sum_range_rec(n, total = 0)
-  total += n
-  return total if n == 1
-  n -= 1
-  sum_range_rec(n, total)
+  return total if n <= 0
+  sum_range_rec(n - 1, total + n)
+end
+
+# write recursive method that prints children from the below nested hash:
+
+tree = {
+  name: 'John',
+  children: [
+    {
+      name: 'Jim',
+      children: []
+    },
+    {
+      name: 'Zoe',
+      children: [
+        { name: 'Kyle', children: []},
+        { name: 'Sophia', children: []}
+      ]
+    }
+  ]
+}
+
+def print_children_recursive (t)
+
 end
