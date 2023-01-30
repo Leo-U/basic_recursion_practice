@@ -36,6 +36,13 @@ tree = {
   ]
 }
 
-def print_children_recursive (t)
-
+def print_children_recursive(t)
+  if t[:children].length == 0
+    return
+  else
+    t[:children].each do |el, i|
+      p el[:name]
+    print_children_recursive(el)
+    end
+  end
 end
