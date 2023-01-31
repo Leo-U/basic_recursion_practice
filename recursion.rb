@@ -51,3 +51,18 @@ def calc_fact(n)
   return 1 if n <= 1
   n * calc_fact(n - 1)
 end
+
+# the Collatz conjecture is for positive integers; basically you can always return 1 by doing the following:
+
+# if n  = 1, return 1
+# if n is even, do n/2
+# if n is odd, do 3n + 1
+
+# write a recursive function that calculates how many steps it takes to get to 1.
+
+def collatz(n, count = 0)
+  if n == 1
+    return count
+  end
+  n.even? ? collatz(n / 2, count + 1) : collatz(n * 3 + 1, count + 1)
+end
