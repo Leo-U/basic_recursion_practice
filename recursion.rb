@@ -39,12 +39,15 @@ tree = {
 }
 
 def print_children_recursive(t)
-  if t[:children].length == 0
-    return
-  else
-    t[:children].each do |el, i|
-      p el[:name]
+  t[:children].each do |el|
+    p el[:name]
     print_children_recursive(el)
-    end
   end
+end
+
+# define a method that calculates factorial of input integer.
+
+def calc_fact(n)
+  return 1 if n <= 1
+  n * calc_fact(n - 1)
 end
