@@ -64,3 +64,15 @@ def collatz(n, count = 0)
   return count if n == 1
   n.even? ? collatz(n / 2, count + 1) : collatz(n * 3 + 1, count + 1)
 end
+
+# Define a recursive function that takes an argument n and prints "n bottles of beer on the wall", "(n-1) bottles of beer on the wall", ..., "no more bottles of beer on the wall".
+
+def bottles(n)
+  if n <= 0
+    puts "no more bottles"
+    return
+  else
+    puts "#{n} bottles of beer"
+    bottles(n - 1)
+  end
+end
