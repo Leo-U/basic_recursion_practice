@@ -85,3 +85,14 @@ def return_fib_value(n, a = 0, b = 1)
   return 0 if n == 0
   return_fib_value(n - 1, b, a + b)
 end
+
+# standard/correct solution:
+def fib(n)
+  if n == 0
+    0
+  elsif n == 1
+    1
+  else
+    fib(n-1) + fib(n-2)
+  end
+end
