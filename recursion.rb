@@ -61,8 +61,6 @@ end
 # write a recursive function that calculates how many steps it takes to get to 1.
 
 def collatz(n, count = 0)
-  if n == 1
-    return count
-  end
+  return count if n == 1
   n.even? ? collatz(n / 2, count + 1) : collatz(n * 3 + 1, count + 1)
 end
