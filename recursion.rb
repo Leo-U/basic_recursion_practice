@@ -81,8 +81,8 @@ end
 
 # my solution:
 def return_fib_value(n, a = 0, b = 1)
-  return 1 if n == 1
-  return 0 if n == 0
+  return b if n == 1
+  return a if n == 0
   return_fib_value(n - 1, b, a + b)
 end
 
